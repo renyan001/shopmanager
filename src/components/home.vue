@@ -1,7 +1,7 @@
-<template> 
+<template>
   <el-container class="container">
     <!-- 顶部 -->
-    <el-header class="header"> 
+    <el-header class="header">
       <el-row>
         <el-col :span="5">
           <img src="@/assets/logo.png" alt="">
@@ -10,7 +10,7 @@
           <h2>电商后台管理系统</h2>
         </el-col>
         <el-col :span="1">
-          <a href="#">退出</a>
+          <a href="#" @click.prevent="handleLoginout()">退出</a>
         </el-col>
       </el-row>
     </el-header>
@@ -32,7 +32,7 @@
             <el-menu-item index="1-1">
               <i class="el-icon-menu"></i>
               用户列表
-            </el-menu-item>        
+            </el-menu-item>
         </el-submenu>
         <!-- 2 -->
         <el-submenu index="2">
@@ -47,7 +47,7 @@
             <el-menu-item index="2-2">
               <i class="el-icon-menu"></i>
               权限列表
-            </el-menu-item>          
+            </el-menu-item>
         </el-submenu>
         <!-- 3 -->
         <el-submenu index="3">
@@ -58,7 +58,7 @@
             <el-menu-item index="3-1">
               <i class="el-icon-menu"></i>
               商品列表
-            </el-menu-item> 
+            </el-menu-item>
             <el-menu-item index="3-2">
               <i class="el-icon-menu"></i>
               分类参数
@@ -66,7 +66,7 @@
             <el-menu-item index="3-3">
               <i class="el-icon-menu"></i>
               商品分类
-            </el-menu-item>      
+            </el-menu-item>
         </el-submenu>
         <!-- 4 -->
         <el-submenu index="4">
@@ -77,7 +77,7 @@
             <el-menu-item index="4-1">
               <i class="el-icon-menu"></i>
               订单列表
-            </el-menu-item>        
+            </el-menu-item>
         </el-submenu>
         <!-- 5 -->
         <el-submenu index="5">
@@ -88,21 +88,39 @@
             <el-menu-item index="5-1">
               <i class="el-icon-menu"></i>
               数据报表
-            </el-menu-item>        
+            </el-menu-item>
         </el-submenu>
       </el-menu>
       </el-aside>
       <el-main class="main">Main</el-main>
     </el-container>
-    
+
   </el-container>
-  
-  
+
 </template>
 
 <script>
 export default {
-
+  // 在组建渲染之前
+  beforeCreate() {
+    if (!localStorage.getItem("token")) {
+      // 回到登录
+      this.$router.push({
+        name:'login'
+      })
+      // 提示
+      this.$message.warning('请先登录')
+    }
+  },
+  methods:{
+    handleLoginout() {
+      localStorage.clear()
+      this.$router.push({
+        name:'login'
+      })
+      this.$message.success('退出成功')
+    }
+  }
 }
 </script>
 
@@ -110,7 +128,7 @@ export default {
   .container {
     height: 100%;
   }
-  .header {    
+  .header {
     background: #b3c0d1;
   }
   h2 {

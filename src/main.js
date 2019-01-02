@@ -8,7 +8,6 @@ import Http from './plugins/http'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/style.css'
 
-
 Vue.use(Http)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
