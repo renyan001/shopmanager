@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
+import MyBread from '@/components/cusBread.vue'
 import Http from './plugins/http'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/style.css'
@@ -12,6 +13,8 @@ import moment from 'moment'
 Vue.use(Http)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
+
+Vue.component(MyBread.name,MyBread);
 
 // 过滤器
 Vue.filter('fmtData', (v) => {
