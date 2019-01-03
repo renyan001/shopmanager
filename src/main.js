@@ -14,9 +14,9 @@ Vue.use(ElementUI)
 Vue.config.productionTip = false
 
 // 过滤器
-Vue.filter('fmtData',(v) => {
-  return moment(v).format('YYYY-MM-DD');
-});
+Vue.filter('fmtData', (v) => {
+  return moment(v).format('YYYY-MM-DD')
+})
 
 /* eslint-disable no-new */
 new Vue({
