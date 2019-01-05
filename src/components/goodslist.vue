@@ -1,6 +1,6 @@
 <template>
 <el-card class="box-card">
-  <my-break level1='商品管理' level2='商品列表'></my-break>
+  <my-bread level1='商品管理' level2='商品列表'></my-bread>
 
  <!-- 搜索框 -->
   <el-row class="searchArea">
