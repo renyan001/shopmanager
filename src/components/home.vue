@@ -26,12 +26,12 @@
         :router="true"
         >
         <!-- 1 -->
-        <el-submenu :index="''+item1.order" v-for="(item1,i) in menus" :key="item1.id">
+        <el-submenu :index="''+item1.order" v-for="(item1) in menus" :key="item1.id">
           <template slot="title">
             <i class="el-icon-location"></i>
             <span>{{item1.authName}}</span>
           </template>
-            <el-menu-item :index="item2.path" v-for="(item2,i) in item1.children" :key="item2.id">
+            <el-menu-item :index="item2.path" v-for="(item2) in item1.children" :key="item2.id">
               <i class="el-icon-menu"></i>
               {{item2.authName}}
             </el-menu-item>

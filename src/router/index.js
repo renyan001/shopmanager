@@ -5,8 +5,8 @@ import Home from '@/components/home.vue'
 import Users from '@/components/users.vue'
 import Rights from '@/components/rights.vue'
 import Roles from '@/components/roles.vue'
-import Goodslist from '@/components/roles.vue'
-import GoodsAdd from '@/components/roles.vue'
+import Goodslist from '@/components/Goodslist.vue'
+import GoodsAdd from '@/components/goodsadd.vue'
 // 单独引入组件
 import {
   Message

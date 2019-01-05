@@ -1,6 +1,6 @@
 <template>
 <el-card class="box-card">
-  <cus-Breadcrumb level1='商品管理' level2='商品列表'></cus-Breadcrumb>
+  <my-break level1='商品管理' level2='商品列表'></my-break>
 
  <!-- 搜索框 -->
   <el-row class="searchArea">
