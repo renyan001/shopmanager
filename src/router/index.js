@@ -7,6 +7,7 @@ import Rights from '@/components/rights.vue'
 import Roles from '@/components/roles.vue'
 import Goodslist from '@/components/Goodslist.vue'
 import GoodsAdd from '@/components/goodsadd.vue'
+import Params from '@/components/params.vue'
 // 单独引入组件
 import {
   Message
@@ -43,8 +44,13 @@ const router =  new Router({
         },
         {
           name: 'goodsadd',
-          path: '/goods/add',
+          path: '/goodsadd',
           component: GoodsAdd
+        },
+        {
+          name: 'params',
+          path: '/params',
+          component: Params
         }
       ]
     },
