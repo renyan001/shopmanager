@@ -125,14 +125,9 @@ export default {
   },
   //  级联的方法
   handleChange() {
-      if (this.selectedOptions.length === 3 && this.active === "1") {
-        this.getDyparams();
-      }
-      if (this.selectedOptions.length === 3 && this.active === "2") {
-        this.getStparams();
-      }
+     
     },
- changeTab() {
+ changeTab() {   
    if (this.selectedOptions.length === 3 && this.active === "1") {    
      this.getDyparams();
    } 
@@ -152,8 +147,6 @@ export default {
       if (status === 200) {
         this.arrStatic = res.data.data;
         console.log(this.arrStatic);
-      } else {
-        this.$message.warning(msg);
       }
     },
   //  获取动态参数

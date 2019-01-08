@@ -9,6 +9,8 @@ import Goodslist from '@/components/Goodslist.vue'
 import GoodsAdd from '@/components/goodsadd.vue'
 import Params from '@/components/params.vue'
 import Categories from '@/components/goodscate.vue'
+import Orders from '@/components/order.vue'
+import Reports from '@/components/reports.vue'
 // 单独引入组件
 import {
   Message
@@ -57,6 +59,16 @@ const router =  new Router({
           name: 'categories',
           path: '/categories',
           component: Categories
+        },
+        {
+          name: 'orders',
+          path: '/orders',
+          component: Orders
+        },
+        {
+          name: 'reports',
+          path: '/reports',
+          component: Reports
         }
       ]
     },
