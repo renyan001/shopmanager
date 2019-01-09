@@ -6,7 +6,7 @@ import router from './router'
 import ELEMENT from 'element-ui'
 import MyBread from '@/components/cusBread.vue'
 import Http from './plugins/http'
-// import 'element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/style.css'
 import moment from 'moment'
 
